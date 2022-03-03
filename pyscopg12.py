@@ -1,33 +1,11 @@
+#Psycopg is the most popular PostgreSQL database adapter for the Python programming language
 import psycopg2
-
-# # Connect to your postgres DB
-# conn = psycopg2.connect("dbname=test user=postgres")
-
-# # Open a cursor to perform database operations
-# cur = conn.cursor()
-
-# # Execute a query
-# cur.execute("SELECT * FROM my_data")
-
-# # Retrieve query results
-# records = cur.fetchall()
-
-import psycopg2
-
-# url = "postgres://postgres:1234@localhost:5432/db_name"
-# connection = psycopg2.connect(url)
-# cursor = connection.cursor()
-
-# cursor.execute("SELECT version();")
-# version = cursor.fetchone()
-# print(version)
-
-# connection.close()
-
-import psycopg2
-
-con = psycopg2.connect(database='leapture', user='postgres',
-                       password='mussa')
+con = psycopg2.connect(
+     database="leapture",
+  user="postgres",
+  host="localhost",
+  port=5432,
+  password="mussa")
 
 with con:
 
